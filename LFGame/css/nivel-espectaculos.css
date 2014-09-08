@@ -1,0 +1,96 @@
+﻿ul.contenedor {
+    background-color:#E3E8E8;
+    height:320px;
+    border-radius:10px;
+    margin:5px;
+    padding-top:10px;
+}
+
+ul.contenedor li{
+    border-radius:5px;
+    margin: 10px;
+    font-size:18px;
+    min-height:18px;
+    cursor: move;
+    text-align:center;
+    position:relative !important;
+}
+
+ul.opciones {
+    background-color:#E3E8E8;
+    border-radius:5px;
+    margin:5px;
+    padding-top:10px;
+    min-height:50px;
+}
+
+ul.opciones li {
+    border-radius:5px;
+    margin-left: 10px;
+    display:inline-block;
+    cursor: move;
+    font-size:18px;
+    min-height:18px;
+    text-align:center;
+    position:relative !important;
+}
+
+ul.conErrores{
+    background-color:rgba(240,77,85,0.3);    
+}
+
+ul.sinErrores{
+    background-color:rgba(27,233,135,0.3);    
+}
+
+.placeholder {
+    background-color:rgba(255,0,0,0.5);
+}
+
+
+div.headerPeliculas {
+     border-radius:5px;
+     background-color:#383232;
+     text-align:center;
+}
+
+/*LI de las opciones que se mueven*/
+li.directores{
+    background-color:skyblue;
+    padding:5px 10px 5px 10px;
+}
+li.actor{
+    background-color:lightsteelblue;
+    padding:5px 10px 5px 10px;
+}
+li.oscars{
+    background-color:lightgoldenrodyellow;
+    padding:5px 10px 5px 10px;
+}
+
+ul.opciones li.screenshot {
+    margin-left:3px;
+    margin-right:-4px;
+}
+
+li.screenshot{
+    padding:5px 10px 5px 10px;
+}
+
+    li.screenshot img {
+        border: 7px solid;
+        border-radius: 8px;
+        border-color:lightpink;
+        width:180px;
+        height:140px;
+    }
+    
+
+
+input[type="button"] {
+            font: 15px notosans-bold, sans-serif;
+            height: auto;
+            padding: 4px;
+            margin:0;
+            display:initial;
+}

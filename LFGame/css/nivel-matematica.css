@@ -1,0 +1,40 @@
+﻿input[type="button"] {
+            font: 15px notosans-bold, sans-serif;
+            height: auto;
+            padding: 4px;
+            margin:0;
+            display:initial;
+}
+input[type="text"] {
+    font: 12px notosans-bold, sans-serif;
+    height: auto;
+    padding: 0px;
+    display: initial;
+    margin:0px;
+    min-width:15px;
+    width:35px;
+    height:20px;
+    vertical-align:middle;
+    text-align:center;
+}
+        
+.columnaDerecha{
+    text-align:left;
+}
+.columnaIzquierda {
+    text-align:right;
+}
+div#errores {
+    display:none;
+    color: red;
+}
+h3#tituloErrores {
+    color:red;
+}
+div#errores li {
+    display: inline;
+    margin-left:10px;
+}
+div#errores li span{
+    margin-left:10px;
+}

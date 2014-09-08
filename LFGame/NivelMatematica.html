@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="css/default.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
+    <link href="css/media-queries.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/nivel-matematica.css" rel="stylesheet" />
+    <link href="css/flipclock.css" rel="stylesheet" />
+    <link href="css/timeout.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/doubletaptogo.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <script type="text/javascript" src="js/flipclock.js"></script>
+    <script type="text/javascript" src="js/nivel-matematica.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>¡---Bienvenido---!</title>
+</head>
+<body>
+    <!-- Titulo de Pagina  -->
+    <div id="page-title">
+        <div class="row">
+            <div class="ten columns centered text-center">
+                <h1><span>¡--</span>LF Game<span>--!</span></h1>
+                <p>
+                    Este juego pondrá en evaluación tu nivel de distintas materias que estas cursando en la escuela.
+                    El objetivo del mismo es sencillo:
+                    Sobrepasar cada uno de los niveles que se plantean para luego poder acceder a un gran secreto lugar escondido.
+                    <span>Descubreló!</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+    <div class="row">
+        <!-- Timer -->
+        <div class="five columns">
+            <div class="clock"></div>
+        </div>
+
+        <!-- Niveles -->
+        <div class="seven columns text-right" id="divPaginacion">
+            <nav class="pagination add-bottom" id="paginacionNiveles">
+                <span id="niveles">NIVELES</span>
+                <a href="#" class="page-numbers prev inactive">< Ant</a>
+                <a href="#" class="page-numbers">1</a>
+                <a href="#" class="page-numbers inactive">2</a>
+                <a href="#" class="page-numbers inactive">3</a>
+                <a href="#" class="page-numbers inactive">4</a>
+                <a href="#" class="page-numbers inactive">5</a>
+                <a href="#" class="page-numbers inactive">6</a>
+                <a href="#" class="page-numbers next">Sig ></a>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- Contenido Del NIVEL  -->
+    <div class="content-outer">
+        <div id="page-content">
+            
+            <!-- ROW de ejercicio -->
+            <div class="row">
+                <!-- Aca va la imagen y el titulo de la funcion -->
+                <div id="funcion_matematica" class="four columns add-bottom">
+                    <h3>Caracterice la siguiente Función</h3>
+
+                </div>
+                <!-- Aca van las características de las funciones -->
+                <div class="eight columns add-bottom">
+                    <br />
+                    <!-- Primer fila de datos -->
+                    <div class="row">
+                        <!--Primer columna izquierda -->
+                        <div class="three columns columnaIzquierda">
+                            <span>Dominio </span>
+                        </div>
+                        <!--Primer columna derecha -->
+                        <div class="three columns columnaDerecha">
+                            <input id="btnCorcheteDominioInicio" type="button" value="(" width="3" height="5" class="llaveParentesisAbre" />
+                            <input id="txtValorDominioInicio" type="text" maxlength="5" />
+                            <input id="btnComaDominio" type="button" value=";" class="comaPuntoComaBarra" style="width:15px" />
+                            <input id="txtValorDominioFinal" type="text" maxlength="5" />
+                            <input id="btnCorcheteDominioFinal" type="button" value="-" width="3" height="5" class="llaveParentesisCierra" />
+                        </div>
+                        <!--Segunda columna izquierda -->
+                        <div class="three columns columnaIzquierda">
+                            <span>Imagen </span>
+                        </div>
+                        <!--Segunda columna derecha -->
+                        <div class="three columns columnaDerecha">
+                            <input id="btnCorcheteImagenInicio" type="button" value="[" width="3" height="5" class="llaveParentesisAbre" />
+                            <input id="txtValorImagenInicio" type="text" maxlength="5" />
+                            <input id="btnComaImagen" type="button" value="/" class="comaPuntoComaBarra" style="width:15px" />
+                            <input id="txtValorImagenFinal" type="text" maxlength="5" />
+                            <input id="btnCorcheteImagenFinal" type="button" value=")" width="3" height="5" class="llaveParentesisCierra" />
+                        </div>
+                    </div>
+                    <hr />
+
+                    <!-- Segunda fila de datos -->
+                    <div class="row">
+                        <!--Primer columna izquierda -->
+                        <div class="three columns columnaIzquierda">
+                            <span>Raíces Ordenadas</span>
+                        </div>
+                        <!--Primer columna derecha -->
+                        <div class="three columns columnaDerecha">
+                            <span>X=</span><input id="txtRaiz1" type="text" maxlength="5" />
+                            <span>X=</span><input id="txtRaiz2" type="text" maxlength="5" />
+                            <span>X=</span><input id="txtRaiz3" type="text" maxlength="5" />
+                        </div>
+                        <!--Segunda columna izquierda -->
+                        <div class="three columns columnaIzquierda">
+                            <span>Punto </span>
+                        </div>
+                        <!--Segunda columna derecha -->
+                        <div class="three columns columnaDerecha">
+                            <span>X=</span><input id="txtCoordenadaX" type="text" maxlength="5" />
+                            <span>Y=</span><input id="txtCoordenadaY" type="text" maxlength="5" />
+                        </div>
+                    </div>
+                    <hr />
+
+                    <!-- Tercer fila de datos -->
+                    <div class="row">
+                        <!--Primer columna izquierda -->
+                        <div class="three columns columnaIzquierda">
+                            <span>Ord. al Origen </span>
+                        </div>
+                        <!--Primer columna derecha -->
+                        <div class="three columns columnaDerecha">
+                            <input id="txtOrdenadaAlOrigen" type="text" maxlength="5" />
+                        </div>
+                        <!--Segunda columna izquierda -->
+                        <div class="three columns columnaIzquierda">
+                            <span>Abscisa al Origen </span>
+                        </div>
+                        <!--Segunda columna derecha -->
+                        <div class="three columns columnaDerecha">
+                            <input id="txtAbscisaAlOrigen" type="text" maxlength="5" />
+                        </div>
+                    </div>
+                    <hr />
+
+                    <!-- Cuarta fila de datos -->
+                    <div class="row">
+                        <!--Primer columna izquierda -->
+                        <div class="six columns columnaIzquierda">
+                            <span>1er Intervalo de Crecimiento </span>
+                        </div>
+                        <!--Primer columna derecha -->
+                        <div class="six columns columnaDerecha">
+                            <input id="btnCorcheteICrecimientoInicio" type="button" value="[" width="3" height="5" class="llaveParentesisAbre" />
+                            <input id="txtValorICrecimientoInicio" type="text" maxlength="5" />
+                            <input id="btnComaICrecimiento" type="button" value="/" class="comaPuntoComaBarra" style="width:15px" />
+                            <input id="txtValorICrecimientoFinal" type="text" maxlength="5" />
+                            <input id="btnCorcheteICrecimientoFinal" type="button" value=")" width="3" height="5" class="llaveParentesisCierra" />
+                        </div>
+                    </div>
+                    <hr />
+
+                    <!-- Quinta fila de datos -->
+                    <div class="row">
+                        <!--Primer columna izquierda -->
+                        <div class="six columns columnaIzquierda">
+                            <span>1er Intervalo de Decrecimiento </span>
+                        </div>
+                        <!--Primer columna derecha -->
+                        <div class="six columns columnaDerecha">
+                            <input id="btnCorcheteIDecrecimientoInicio" type="button" value="[" width="3" height="5" class="llaveParentesisAbre" />
+                            <input id="txtValorIDecrecimientoInicio" type="text" maxlength="5" />
+                            <input id="btnComaIDecrecimiento" type="button" value="/" class="comaPuntoComaBarra" style="width:15px" />
+                            <input id="txtValorIDecrecimientoFinal" type="text" maxlength="5" />
+                            <input id="btnCorcheteIDecrecimientoFinal" type="button" value=")" width="3" height="5" class="llaveParentesisCierra" />
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+            </div>
+
+            <!-- ROW de boton corregir -->
+            <div class="row" style="text-align:right">
+                <input id="btnContinuar" type="button" value="Corregir!" style="min-width:150px" />
+            </div>
+
+            <!--ROW lista de errores-->
+            <div class="row" id="errores">
+                <h3 id="tituloErrores">ERRORES</h3>
+                <ul id="listaErrores">
+                    <li id="dominio">Dominio<span>||</span></li>
+                    <li id="imagen">Imagen<span>||</span></li>
+                    <li id="raices">Raíces<span>||</span></li>
+                    <li id="punto">Punto<span>||</span></li>
+                    <li id="ordenada">Ordenada<span>||</span></li>
+                    <li id="abscisa">Abscisa<span>||</span></li>
+                    <li id="crecimiento">Crecimiento<span>||</span></li>
+                    <li id="decrecimiento">Decrecimiento<span>||</span></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Primer cambio de color (Gris Claro) -->
+    <section id="tweets">
+        <div class="row">
+            <div class="seven columns">
+                <p>
+                    El misterioso final, hará que LF Game sea imposible de abandonar. Continúa esta historia hasta finalizar
+                    todos los niveles.
+                    Solo así podrás lograr el acceso a un secreto lugar. ¿Qué hay en dicho lugar? Es el enigma descubrir. Te
+                    aseguro que te va a gustar y mucho.
+                    ¡Mucha Suerte!
+                </p>
+            </div>
+            <div class="five columns">
+                <aside class="pull-quote">
+                    <blockquote>
+                        <p>
+                            Los grandes logros no se obtienen de la noche a la mañana, son el resultado del trabajo y la dedicación
+                        </p>
+                    </blockquote>
+                </aside>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve columns centered text-center">
+                <hr />
+                <h5>RESOLVER DE MANERA INDIVIDUAL</h5>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

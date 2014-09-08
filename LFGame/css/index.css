@@ -1,0 +1,30 @@
+﻿span#niveles {
+            font-size:25px;
+            margin-right:20px;
+            font-weight: bold;
+            vertical-align:middle;
+}
+
+nav#paginacionNiveles {
+    text-align: right;
+    font-family: notosans-regular, sans-serif;
+    font-size: 15px;
+    display:inline;
+
+}
+
+nav#paginacionNiveles a {
+        margin-top:5px;
+}
+
+h1#bienvenido {
+   color:#838C95; 
+}
+
+h1#bienvenido span {
+   color:#11ABB0; 
+}
+
+div#divPaginacion {
+        margin-top:80px;
+}

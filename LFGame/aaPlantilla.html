@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="css/default.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
+    <link href="css/media-queries.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/flipclock.css" rel="stylesheet" />
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/doubletaptogo.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/flipclock.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>¡---Bienvenido---!</title>
+</head>
+<body>
+    <!-- Titulo de Pagina  -->
+    <div id="page-title">
+        <div class="row">
+            <div class="ten columns centered text-center">
+                <h1><span>¡--</span>LF Game<span>--!</span></h1>
+                <p>
+                    Este juego pondrá en evaluación tu nivel de distintas materias que estas cursando en la escuela.
+                    El objetivo del mismo es sencillo:
+                    Sobrepasar cada uno de los niveles que se plantean para luego poder acceder a un gran secreto lugar escondido.
+                    <span>Descubreló!</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="row">
+        <!-- Timer -->
+        <div class="five columns">
+            <div class="clock"></div>
+        </div>
+
+        <!-- Niveles -->
+        <div class="seven columns text-right">
+            <nav class="pagination add-bottom" id="paginacionNiveles">
+                <span id="niveles">NIVELES</span>
+                <a href="#" class="page-numbers prev inactive">< Ant</a>
+                <a href="#" class="page-numbers">1</a>
+                <a href="#" class="page-numbers inactive">2</a>
+                <a href="#" class="page-numbers inactive">3</a>
+                <a href="#" class="page-numbers inactive">4</a>
+                <a href="#" class="page-numbers inactive">5</a>
+                <a href="#" class="page-numbers inactive">6</a>
+                <a href="#" class="page-numbers next">Sig ></a>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- Contenido Del NIVEL  -->
+    <div class="content-outer">
+        <div id="page-content">
+            
+            <!-- ACA VA EL CODIGO DEL NIVEL -->
+
+        </div>
+    </div>
+
+    <!-- Primer cambio de color (Gris Claro) -->
+    <section id="tweets">
+        <div class="row">
+            <div class="seven columns">
+                <p>
+                    El misterioso final, hará que LF Game sea imposible de abandonar. Continúa esta historia hasta finalizar
+                    todos los niveles.
+                    Solo así podrás lograr el acceso a un secreto lugar. ¿Qué hay en dicho lugar? Es el enigma descubrir. Te
+                    aseguro que te va a gustar y mucho.
+                    ¡Mucha Suerte!
+                </p>
+            </div>
+            <div class="five columns">
+                <aside class="pull-quote">
+                    <blockquote>
+                        <p>
+                            Los grandes logros no se obtienen de la noche a la mañana, son el resultado del trabajo y la dedicación
+                        </p>
+                    </blockquote>
+                </aside>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve columns centered text-center">
+                <hr />
+                <h5>RESOLVER DE MANERA INDIVIDUAL</h5>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        var clock;
+
+        $(document).ready(function () {
+
+            // Instantiate a counter
+            clock = new FlipClock($('.clock'), 1000, {
+                clockFace: 'Counter',
+                autoStart: true,
+                countdown: true,
+                stop: function () {
+                    alert("El tiempo se acabo");
+                    window.location.replace("http://www.google.com");
+                }
+            });
+
+        });
+    </script>
+
+</body>
+</html>
