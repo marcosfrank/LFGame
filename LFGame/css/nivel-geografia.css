@@ -1,1 +1,74 @@
 ﻿
+#wrapper {
+width: 620px;
+padding: 20px;
+margin: 10px auto;
+display:block;
+overflow:hidden;
+-webkit-border-radius: 5px;
+border-radius: 5px; 
+background-color:white;
+-webkit-box-shadow: 0px 0px 1px 1px #000;
+box-shadow: 0px 0px 1px 1px #000; 
+}
+
+#mapaArg {
+float:left;
+width: 297px;
+}
+
+#selections {
+float:right; 
+width: 250px; 
+height:650px;
+padding: 5px;
+border:1px solid black;
+-webkit-border-radius: 5px;
+border-radius: 5px; 
+}
+
+#selections h3{
+    color:#838C95;
+    text-align:center;
+    text-decoration:underline;    
+}
+#selections strong{
+    margin-left:-25px;  
+}
+
+input[type="text"] {
+    min-width:200px;
+    height: 25px;
+    margin: 0px;
+}
+input[type="button"] {
+    font-size: 15px;
+    padding:0px;
+}
+
+ul.mesopotamia li input{
+    background-color:rgb(181,230,29);
+}
+
+ul.noa li input{
+    background-color:rgb(255,242,0);
+}
+ul.nortecentro li input{
+    background-color:rgb(34,117,76);
+    color:#D3D9D9;
+}
+ul.centro li input{
+    background-color:rgb(128,128,0);
+    color:#D3D9D9;
+}
+ul.cuyo li input{
+    background-color:rgb(163,73,164);
+    color:#D3D9D9;
+}
+ul.patagonia li input{
+    background-color:rgb(153,217,234);
+}
+
+ul li input.error{
+    background-color:rgba(240,77,85,0.4);
+}

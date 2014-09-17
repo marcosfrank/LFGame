@@ -2,3 +2,4 @@ C:\Users\marcos.frank\Documents\Visual Studio 2010\Projects\LFGame\LFGame\bin\LF
 C:\Users\marcos.frank\Documents\Visual Studio 2010\Projects\LFGame\LFGame\bin\LFGame.pdb
 C:\Users\marcos.frank\Documents\Visual Studio 2010\Projects\LFGame\LFGame\obj\Debug\LFGame.dll
 C:\Users\marcos.frank\Documents\Visual Studio 2010\Projects\LFGame\LFGame\obj\Debug\LFGame.pdb
+C:\Users\marcos.frank\Documents\Visual Studio 2010\Projects\LFGame\LFGame\obj\Debug\LFGame.csprojResolveAssemblyReference.cache

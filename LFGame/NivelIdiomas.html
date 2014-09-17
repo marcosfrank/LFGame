@@ -1,16 +1,14 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
-    <title>Nivel Geografia</title>
     <link href="css/default.css" rel="stylesheet" />
     <link href="css/fonts.css" rel="stylesheet" />
     <link href="css/layout.css" rel="stylesheet" />
     <link href="css/media-queries.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
     <link href="css/flipclock.css" rel="stylesheet" />
-    <link href="css/index.css" rel="stylesheet" type="text/css" />
-    <link href="css/nivel-geografia.css" rel="stylesheet" type="text/css" />
-    
+    <link href="css/nivel-idiomas.css" rel="stylesheet" type="text/css" />
+
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/doubletaptogo.js"></script>
@@ -19,8 +17,7 @@
     <script type="text/javascript" src="js/modernizr.js"></script>
     <script type="text/javascript" src="js/flipclock.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.imagemapster.min.js" type="text/javascript"></script>
-    <script src="js/nivel-geografia.js" type="text/javascript"></script>
+    <script src="js/nivel-idiomas.js" type="text/javascript"></script>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>¡---Bienvenido---!</title>
@@ -48,7 +45,7 @@
             <div class="clock"></div>
         </div>
 
-        <!-- Niveles --> 
+        <!-- Niveles -->
         <div class="seven columns text-right"  id="divPaginacion">
             <nav class="pagination add-bottom" id="paginacionNiveles">
                 <span id="niveles">NIVELES</span>
@@ -68,23 +65,28 @@
     <!-- Contenido Del NIVEL  -->
     <div class="content-outer">
         <div id="page-content">
+            <!-- ACA VA EL CODIGO DEL NIVEL -->
+
             <div class="row">
-                <div class="twelve columns text-center">
-                    <p> 
-                        El objetivo de este nivel es que nombres 5 (cinco) de las provincias de nuestro país con sus 
-                        respectivas capitales. Separando geográficamente el país en las siguientes zonas:
-                        Cuyo, Mesopotamia, Centro, NOA, Patagonia y Norte Central. 
-                        <h5>USA UNA PROVINCIA DE CADA REGIÓN. [PISTA:colores]</h5>
-                    </p>
+                <div class="twelve columns">
+                    <div class="three columns izquierda">
+                        <img id="botonVerde" src="images/LFGame/greenbutton.png" />
+                    </div>
+                    <div class="nine columns centro">
+                        <ul>
+                            <li>In</li>
+                            <li>On</li>
+                            <li>At</li>
+                        </ul>
+                    </div>
+                    
+                    <hr />
+                    <div class="row" style="text-align:right">
+                        <input id="btnContinuar" type="button" value="Corregir!" style="min-width:150px" />
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="twelve columns" id="contenidoNivel">
-                </div>
-            </div>
-            <div class="row" style="text-align:right">
-                <input id="btnContinuar" type="button" value="Corregir!" style="min-width:150px" />
-            </div>
+
         </div>
     </div>
 

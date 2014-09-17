@@ -58,9 +58,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="aaPlantilla.html" />
-    <Content Include="css\nivel-geografia.css" />
-    <Content Include="js\nivel-geografia.js" />
+    <Content Include="css\nivel-idiomas.css" />
+    <Content Include="images\LFGame\greenbutton.png" />
+    <Content Include="js\nivel-idiomas.js" />
+    <Content Include="NivelIdiomas.html" />
+    <Content Include="images\LFGame\espectaculo1.jpg" />
+    <Content Include="images\LFGame\espectaculo2.jpg" />
+    <Content Include="images\LFGame\espectaculo3.jpg" />
+    <Content Include="images\LFGame\espectaculo4.jpg" />
+    <Content Include="images\LFGame\espectaculo5.jpg" />
+    <Content Include="images\LFGame\espectaculo6.jpg" />
+    <Content Include="images\LFGame\espectaculo7.jpg" />
+    <Content Include="images\LFGame\espectaculo8.jpg" />
+    <Content Include="images\LFGame\geografia.jpg" />
     <Content Include="NivelGeografia.html" />
+    <Content Include="css\nivel-geografia.css" />
+    <Content Include="js\jquery.imagemapster.min.js" />
+    <Content Include="js\nivel-geografia.js" />
     <Content Include="css\default.css" />
     <Content Include="css\flipclock.css" />
     <Content Include="css\font-awesome\css\font-awesome.css" />
@@ -72,9 +86,7 @@
     <Content Include="css\nivel-espectaculos.css" />
     <Content Include="css\nivel-matematica.css" />
     <Content Include="css\timeout.css" />
-    <Content Include="images\author-img.png" />
     <Content Include="images\bg.jpg" />
-    <Content Include="images\client-img.png" />
     <Content Include="images\content-bg.jpg" />
     <Content Include="images\direction-nav-left.png" />
     <Content Include="images\direction-nav-right.png" />
@@ -85,31 +97,10 @@
     <Content Include="images\LFGame\matematica3.png" />
     <Content Include="images\LFGame\matematica4.png" />
     <Content Include="images\loader.gif" />
-    <Content Include="images\logo.png" />
     <Content Include="images\overlay.png" />
-    <Content Include="images\portfolio\camera-man.jpg" />
-    <Content Include="images\portfolio\coffee-cup.jpg" />
-    <Content Include="images\portfolio\console.jpg" />
-    <Content Include="images\portfolio\entries\geometric-backgrounds-01.jpg" />
-    <Content Include="images\portfolio\entries\geometric-backgrounds-02.jpg" />
-    <Content Include="images\portfolio\farmerboy.jpg" />
-    <Content Include="images\portfolio\geometrics.jpg" />
-    <Content Include="images\portfolio\into-the-light.jpg" />
-    <Content Include="images\post-image\post-image-1300x500-01.jpg" />
-    <Content Include="images\post-image\post-image-1300x500-02.jpg" />
-    <Content Include="images\post-image\post-image-1300x500-03.jpg" />
-    <Content Include="images\sample-image.jpg" />
     <Content Include="images\search-icon.png" />
-    <Content Include="images\sliders\home-slider-image-01.png" />
-    <Content Include="images\sliders\home-slider-image-02.png" />
-    <Content Include="images\team\team-img-01.jpg" />
-    <Content Include="images\team\team-img-02.jpg" />
-    <Content Include="images\team\team-img-03.jpg" />
     <Content Include="images\thumb.jpg" />
     <Content Include="images\tweets-bg.jpg" />
-    <Content Include="images\user-01.png" />
-    <Content Include="images\user-02.png" />
-    <Content Include="images\user-03.png" />
     <Content Include="images\works-bg.jpg" />
     <Content Include="Index.html" />
     <Content Include="js\doubletaptogo.js" />
@@ -125,6 +116,7 @@
     <Content Include="js\timeout.js" />
     <Content Include="NivelEspectaculos.html" />
     <Content Include="NivelMatematica.html" />
+    <Content Include="templates\geografia1.htm" />
     <Content Include="TimeOut.html" />
   </ItemGroup>
   <ItemGroup>
@@ -211,7 +203,9 @@
     <None Include="css\fonts\raleway\raleway-thin-webfont.svg" />
     <None Include="css\fonts\raleway\raleway-thin-webfont.ttf" />
     <None Include="css\fonts\raleway\raleway-thin-webfont.woff" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
