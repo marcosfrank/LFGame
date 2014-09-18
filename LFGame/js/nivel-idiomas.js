@@ -11,7 +11,7 @@
 //	valor: es el valor de la opcion (texto)
 //	correcto: indica si es la opcion correcto (booleano)
 var ejercicios = [
-	    { codigo: 1, antes: "I usually study", despues: "Home on the afternoon.", opciones: [{ valor: "in", correcto: false }, { valor: "on", correcto: false }, { valor: "at", correcto: true}] },
+	    { codigo: 1, antes: "I usually study", despues: "Home on the afternoon.", opciones: [{ valor: "on", correcto: false }, { valor: "at", correcto: true }, { valor: "in", correcto: false}] },
 	    { codigo: 2, antes: "I was ", despues: "Marcos' house playing computer games.", opciones: [{ valor: "at", correcto: true }, { valor: "in", correcto: false }, { valor: "on", correcto: false}] },
 	    { codigo: 3, antes: "My new house is", despues: "155 Ana Maria Janer Street. My oldest one, is near too.", opciones: [{ valor: "at", correcto: true }, { valor: "in", correcto: false }, { valor: "on", correcto: false}] },
 	    { codigo: 4, antes: "Mama hurry up! I'm standing up", despues: "the door.", opciones: [{ valor: "at", correcto: true }, { valor: "in", correcto: false }, { valor: "on", correcto: false}] },
@@ -68,6 +68,14 @@ function crearAppend(contenedor, clase, texto) {
     }
 }
 
+function getRespuestaCorrecta(ejercicio) {
+    for (var i = 0; i < ejercicio.opciones.length; i++) {
+        if (ejercicio.opciones[i].correcto) {
+            return ejercicio.opciones[i].valor;
+        }
+    }
+    return "";
+}
 
 //READY DEL DOCUMENTO
 
@@ -112,18 +120,27 @@ $(document).ready(function () {
 
         if ($("#contenedorPadre div.seleccionado").length == 6) {
             var contenedores = $("#contenedorPadre div.contenedor");
+            var sinError = true;
             for (var i = 0; i < 6; i++) {
                 //Toma el div contenedor actual
                 var actual = contenedores.first();
-                if (ejercicios[indicesElegidos[i]].opciones[0].valor != actual.find(".seleccionado").text()) {
+                var respCorrecta = getRespuestaCorrecta(ejercicios[indicesElegidos[i]]);
+                if (respCorrecta != actual.find(".seleccionado").text()) {
                     actual.find(".seleccionado").addClass("error");
+                    sinError = false;
                 }
                 //Quita el primer contenedor de la lista
                 contenedores = contenedores.next();
             }
+            if (sinError) {
+                alert('muy bien');
+            } else {
+                clock.setTime(30);
+                alert('Tienes algunos errores.\n Tenes 30 segundos para revisar lo que has hecho mal.\n\t APROVECHALOS');
+            }
         } else {
             clock.setTime(5);
-            alert('Debes seleccionar la respuesta en los 6 ejercicios.Tenes 5 segundos para revisar lo que has hecho mal. APROVECHALOS');
+            alert('Debes seleccionar la respuesta en los 6 ejercicios.\n Tenes 5 segundos para revisar lo que has hecho mal.\n\t APROVECHALOS');
         }
 
     });

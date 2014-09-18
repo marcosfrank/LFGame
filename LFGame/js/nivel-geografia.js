@@ -79,17 +79,17 @@ $(document).ready(function () {
                 } else {
                     alert('Los nombres de las provincias o capitales de las mismas no son correctas');
                     clock.setTime(30);
-                    alert('Las 5 provincias deben ser de distintas zonas.Tenes 30 segundos para revisar lo que has hecho mal. APROVECHALOS');
+                    alert('Las 5 provincias deben ser de distintas zonas.\nTenes 30 segundos para revisar lo que has hecho mal.\n\t APROVECHALOS');
                     $("#btnContinuar").attr("disabled", "true");
                 }
             } else {
                 clock.setTime(10);
-                alert('Las 5 provincias deben ser de distintas zonas.Tenes 10 segundos para revisar lo que has hecho mal. APROVECHALOS');
+                alert('Las 5 provincias deben ser de distintas zonas.\n Tenes 10 segundos para revisar lo que has hecho mal.\n\t APROVECHALOS');
                 $("#btnContinuar").attr("disabled", "true");
             }
         } else {
             clock.setTime(5);
-            alert('Las 5 provincias deben ser de distintas zonas.Tenes 5 segundos para revisar lo que has hecho mal. APROVECHALOS');
+            alert('Las 5 provincias deben ser de distintas zonas.\n Tenes 5 segundos para revisar lo que has hecho mal.\n\t APROVECHALOS');
             $("#btnContinuar").attr("disabled", "true");
         }
 
