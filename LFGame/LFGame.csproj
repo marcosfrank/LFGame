@@ -58,6 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="aaPlantilla.html" />
+    <Content Include="images\LFGame\historia.jpg" />
+    <Content Include="images\LFGame\historia2.jpg" />
+    <Content Include="images\LFGame\historia3.jpg" />
     <Content Include="NivelHistoria.html" />
     <Content Include="css\nivel-historia.css" />
     <Content Include="css\nivel-idiomas.css" />

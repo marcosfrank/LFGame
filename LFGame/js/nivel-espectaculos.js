@@ -137,6 +137,8 @@
 		connectToSortable: ".contenedor",
 		revert: "invalid"
 	});
+
+    
 	
 	$("#btnContinuar").on("click", function () {
 		if(corregirTodos()){
