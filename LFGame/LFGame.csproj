@@ -61,6 +61,11 @@
     <Content Include="images\LFGame\historia.jpg" />
     <Content Include="images\LFGame\historia2.jpg" />
     <Content Include="images\LFGame\historia3.jpg" />
+    <Content Include="js\nivel-index.js" />
+    <Content Include="js\jquery-1.11.1.min.js" />
+    <Content Include="js\jquery-migrate-1.2.1.min.js" />
+    <Content Include="js\jquery.imagemapster.min.js" />
+    <Content Include="Niveles.txt" />
     <Content Include="NivelHistoria.html" />
     <Content Include="css\nivel-historia.css" />
     <Content Include="css\nivel-idiomas.css" />
@@ -80,7 +85,6 @@
     <Content Include="images\LFGame\geografia.jpg" />
     <Content Include="NivelGeografia.html" />
     <Content Include="css\nivel-geografia.css" />
-    <Content Include="js\jquery.imagemapster.min.js" />
     <Content Include="js\nivel-geografia.js" />
     <Content Include="css\default.css" />
     <Content Include="css\flipclock.css" />
@@ -113,8 +117,6 @@
     <Content Include="js\doubletaptogo.js" />
     <Content Include="js\flipclock.js" />
     <Content Include="js\init.js" />
-    <Content Include="js\jquery-1.10.2.min.js" />
-    <Content Include="js\jquery-migrate-1.2.1.min.js" />
     <Content Include="js\jquery-ui.min.js" />
     <Content Include="js\jquery.flexslider.js" />
     <Content Include="js\modernizr.js" />

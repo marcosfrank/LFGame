@@ -21,20 +21,22 @@ input[type="text"] {
 .columnaDerecha{
     text-align:left;
 }
+
+.columnaDerecha span{
+    margin:0px 2px 0px 3px;
+}
 .columnaIzquierda {
     text-align:right;
 }
-div#errores {
-    display:none;
-    color: red;
+
+.columnaIzquierda span{
+    margin:0px 2px 0px 3px;
 }
-h3#tituloErrores {
-    color:red;
+
+span.error{
+    color:Red;
 }
-div#errores li {
-    display: inline;
-    margin-left:10px;
-}
-div#errores li span{
-    margin-left:10px;
+
+div#errores{
+    color:Red;
 }

@@ -133,6 +133,7 @@ $(document).ready(function () {
                 contenedores = contenedores.next();
             }
             if (sinError) {
+                sessionStorage.nivelActual = "idiomas";
                 alert('muy bien');
             } else {
                 clock.setTime(30);

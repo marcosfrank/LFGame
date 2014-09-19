@@ -10,8 +10,7 @@
     <link href="css/flipclock.css" rel="stylesheet" />
     <link href="css/timeout.css" rel="stylesheet" />
     
-    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/doubletaptogo.js"></script>
     <script type="text/javascript" src="js/init.js"></script>
     <script type="text/javascript" src="js/jquery.flexslider.js"></script>
@@ -81,7 +80,7 @@
                     <div class="row">
                         <!--Primer columna izquierda -->
                         <div class="three columns columnaIzquierda">
-                            <span>Dominio </span>
+                            <span id="dominio">Dominio </span>
                         </div>
                         <!--Primer columna derecha -->
                         <div class="three columns columnaDerecha">
@@ -93,7 +92,7 @@
                         </div>
                         <!--Segunda columna izquierda -->
                         <div class="three columns columnaIzquierda">
-                            <span>Imagen </span>
+                            <span id="imagen">Imagen </span>
                         </div>
                         <!--Segunda columna derecha -->
                         <div class="three columns columnaDerecha">
@@ -110,7 +109,7 @@
                     <div class="row">
                         <!--Primer columna izquierda -->
                         <div class="three columns columnaIzquierda">
-                            <span>Raíces Ordenadas</span>
+                            <span id="raices">Raíces Ordenadas</span>
                         </div>
                         <!--Primer columna derecha -->
                         <div class="three columns columnaDerecha">
@@ -120,7 +119,7 @@
                         </div>
                         <!--Segunda columna izquierda -->
                         <div class="three columns columnaIzquierda">
-                            <span>Punto </span>
+                            <span id="punto">Punto </span>
                         </div>
                         <!--Segunda columna derecha -->
                         <div class="three columns columnaDerecha">
@@ -134,7 +133,7 @@
                     <div class="row">
                         <!--Primer columna izquierda -->
                         <div class="three columns columnaIzquierda">
-                            <span>Ord. al Origen </span>
+                            <span id="ordenada">Ord. al Origen </span>
                         </div>
                         <!--Primer columna derecha -->
                         <div class="three columns columnaDerecha">
@@ -142,7 +141,7 @@
                         </div>
                         <!--Segunda columna izquierda -->
                         <div class="three columns columnaIzquierda">
-                            <span>Abscisa al Origen </span>
+                            <span id="abscisa">Abscisa al Origen </span>
                         </div>
                         <!--Segunda columna derecha -->
                         <div class="three columns columnaDerecha">
@@ -155,7 +154,7 @@
                     <div class="row">
                         <!--Primer columna izquierda -->
                         <div class="six columns columnaIzquierda">
-                            <span>1er Intervalo de Crecimiento </span>
+                            <span id="crecimiento">1er Intervalo de Crecimiento </span>
                         </div>
                         <!--Primer columna derecha -->
                         <div class="six columns columnaDerecha">
@@ -172,7 +171,7 @@
                     <div class="row">
                         <!--Primer columna izquierda -->
                         <div class="six columns columnaIzquierda">
-                            <span>1er Intervalo de Decrecimiento </span>
+                            <span id="decrecimiento">1er Intervalo de Decrecimiento </span>
                         </div>
                         <!--Primer columna derecha -->
                         <div class="six columns columnaDerecha">
@@ -192,20 +191,14 @@
                 <input id="btnContinuar" type="button" value="Corregir!" style="min-width:150px" />
             </div>
 
-            <!--ROW lista de errores-->
-            <div class="row" id="errores">
-                <h3 id="tituloErrores">ERRORES</h3>
-                <ul id="listaErrores">
-                    <li id="dominio">Dominio<span>||</span></li>
-                    <li id="imagen">Imagen<span>||</span></li>
-                    <li id="raices">Raíces<span>||</span></li>
-                    <li id="punto">Punto<span>||</span></li>
-                    <li id="ordenada">Ordenada<span>||</span></li>
-                    <li id="abscisa">Abscisa<span>||</span></li>
-                    <li id="crecimiento">Crecimiento<span>||</span></li>
-                    <li id="decrecimiento">Decrecimiento<span>||</span></li>
-                </ul>
+            <div id="errores" class="row">
+                <div class="twelve column">
+                    <hr />
+                    <span></span>
+                    <a href="NivelMatematica.html"><input id="volver" type="button" value="Volver a Intentarlo" style="min-width:150px" /></a>
+                </div>
             </div>
+            
 
 
         </div>
