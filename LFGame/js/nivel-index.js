@@ -1,5 +1,5 @@
-﻿if (sessionStorage.nivelActual) {
-    alert(sessionStorage.nivelActual);
-} else {
-    sessionStorage.nivelActual = 0;
-}
+﻿/// <reference path="jquery-1.11.1.min.js" />
+
+$(document).ready(function () {
+    
+});

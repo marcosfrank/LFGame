@@ -81,15 +81,15 @@ function getRespuestaCorrecta(ejercicio) {
 
 
 $(document).ready(function () {
-
+    $("div#errores").hide();
+    habilitarPaginacion(1);
     // Instantiate a counter
-    clock = new FlipClock($('.clock'), 1000, {
+    clock = new FlipClock($('.clock'), 180, {
         clockFace: 'Counter',
         autoStart: true,
         countdown: true,
         stop: function () {
-            alert("El tiempo se acabo");
-            window.location.replace("http://www.google.com");
+            window.location.replace("TimeOut.html");
         }
     });
 
@@ -117,32 +117,48 @@ $(document).ready(function () {
     });
 
     $("#btnContinuar").on("click", function () {
-
-        if ($("#contenedorPadre div.seleccionado").length == 6) {
-            var contenedores = $("#contenedorPadre div.contenedor");
-            var sinError = true;
-            for (var i = 0; i < 6; i++) {
-                //Toma el div contenedor actual
-                var actual = contenedores.first();
-                var respCorrecta = getRespuestaCorrecta(ejercicios[indicesElegidos[i]]);
-                if (respCorrecta != actual.find(".seleccionado").text()) {
-                    actual.find(".seleccionado").addClass("error");
-                    sinError = false;
+        if ($(this).val() == "Corregir!") {
+            if ($("#contenedorPadre div.seleccionado").length == 6) {
+                var contenedores = $("#contenedorPadre div.contenedor");
+                var sinError = true;
+                for (var i = 0; i < 6; i++) {
+                    //Toma el div contenedor actual
+                    var actual = contenedores.first();
+                    var respCorrecta = getRespuestaCorrecta(ejercicios[indicesElegidos[i]]);
+                    if (respCorrecta != actual.find(".seleccionado").text()) {
+                        actual.find(".seleccionado").addClass("error");
+                        sinError = false;
+                    }
+                    //Quita el primer contenedor de la lista
+                    contenedores = contenedores.next();
                 }
-                //Quita el primer contenedor de la lista
-                contenedores = contenedores.next();
-            }
-            if (sinError) {
-                sessionStorage.nivelActual = "idiomas";
-                alert('muy bien');
+                if (sinError) {
+                    $("#btnContinuar").val("Continuar >>");
+                    $("#btnContinuar").css("background-color", "lightgreen");
+                    clock.setTime(1000);
+                } else {
+                    $("#btnContinuar").attr("disabled", true);
+                    $("#btnContinuar").css("background-color", "lightcoral");
+                    $("#btnContinuar").css("cursor", "auto");
+                    $("div#errores span").text("Tenes 30 segundos para revisar lo que has hecho mal. APROVECHALOS");
+                    $("div#errores").fadeIn();
+                    clock.setTime(30);
+                }
             } else {
-                clock.setTime(30);
-                alert('Tienes algunos errores.\n Tenes 30 segundos para revisar lo que has hecho mal.\n\t APROVECHALOS');
+                $("#btnContinuar").attr("disabled", true);
+                $("#btnContinuar").css("background-color", "lightcoral");
+                $("#btnContinuar").css("cursor", "auto");
+                $("div#errores span").text("Debes seleccionar la respuesta en los 6 ejercicios. Tenes 10 segundos para revisar lo que has hecho mal. APROVECHALOS");
+                $("div#errores").fadeIn();
+                clock.setTime(10);
             }
         } else {
-            clock.setTime(5);
-            alert('Debes seleccionar la respuesta en los 6 ejercicios.\n Tenes 5 segundos para revisar lo que has hecho mal.\n\t APROVECHALOS');
+            localStorage.setItem("nivelActual", "2");
+            window.location.replace("NivelGeografia.html");
         }
+
+
+
 
     });
 

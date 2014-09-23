@@ -28,3 +28,7 @@ h1#bienvenido span {
 div#divPaginacion {
         margin-top:80px;
 }
+
+div#errores{
+    color:Red;
+}

@@ -25,15 +25,16 @@ var provincias = {
     23:["tierra del fuego","ushuaia"]
 }
 $(document).ready(function () {
-
+    $("div#errores").hide();
+    habilitarPaginacion(2);
     // Instantiate a counter
-    clock = new FlipClock($('.clock'), 1000, {
+    clock = new FlipClock($('.clock'), 180, {
         clockFace: 'Counter',
         autoStart: true,
         countdown: true,
         stop: function () {
-            alert("El tiempo se acabo");
-            window.location.replace("http://www.google.com");
+            window.location.replace("TimeOut.html");
+
         }
     });
 
@@ -72,26 +73,43 @@ $(document).ready(function () {
 
     $("#contenidoNivel").load("../templates/geografia1.htm");
     $("#btnContinuar").on("click", function () {
-        if (validarCantidadProvincias()) {
-            if (validarDisntintasZonas()) {
-                if (validarNombresYCapitales()) {
-                    alert('muy bien');
+        if ($(this).val() == "Corregir!") {
+            if (validarCantidadProvincias()) {
+                if (validarDisntintasZonas()) {
+                    if (validarNombresYCapitales()) {
+                        $("#btnContinuar").val("Continuar >>");
+                        $("#btnContinuar").css("background-color", "lightgreen");
+                        clock.setTime(1000);
+                    } else {
+                        $("#btnContinuar").attr("disable", true);
+                        $("#btnContinuar").css("background-color", "lightcoral");
+                        $("#btnContinuar").css("cursor", "auto");
+                        $("div#errores span").text("Los nombres de las provincias o capitales de las mismas no son correctas. Tenes 30 segundos para revisar lo que has hecho mal. APROVECHALOS");
+                        $("div#errores").fadeIn();
+                        clock.setTime(30);
+                    }
                 } else {
-                    alert('Los nombres de las provincias o capitales de las mismas no son correctas');
-                    clock.setTime(30);
-                    alert('Las 5 provincias deben ser de distintas zonas.\nTenes 30 segundos para revisar lo que has hecho mal.\n\t APROVECHALOS');
-                    $("#btnContinuar").attr("disabled", "true");
+                    $("#btnContinuar").attr("disabled", true);
+                    $("#btnContinuar").css("background-color", "lightcoral");
+                    $("#btnContinuar").css("cursor", "auto");
+                    $("div#errores span").text("Las 5 provincias deben ser de distintas zonas. Tenes 15 segundos para revisar lo que has hecho mal. APROVECHALOS");
+                    $("div#errores").fadeIn();
+                    clock.setTime(15);
                 }
             } else {
+                $("#btnContinuar").attr("disabled", true);
+                $("#btnContinuar").css("background-color", "lightcoral");
+                $("#btnContinuar").css("cursor", "auto");
+                $("div#errores span").text("Debes seleccionar 5 provincias. Tenes 10 segundos para revisar lo que has hecho mal. APROVECHALOS");
+                $("div#errores").fadeIn();
                 clock.setTime(10);
-                alert('Las 5 provincias deben ser de distintas zonas.\n Tenes 10 segundos para revisar lo que has hecho mal.\n\t APROVECHALOS');
-                $("#btnContinuar").attr("disabled", "true");
             }
         } else {
-            clock.setTime(5);
-            alert('Las 5 provincias deben ser de distintas zonas.\n Tenes 5 segundos para revisar lo que has hecho mal.\n\t APROVECHALOS');
-            $("#btnContinuar").attr("disabled", "true");
+            localStorage.setItem("nivelActual", "3");
+            window.location.replace("NivelMatematica.html");
         }
+
+
 
     });
 

@@ -95,25 +95,36 @@ function corregirUno(ejercicio, fila) {
 //READY DEL DOCUMENTO
 
 $(document).ready(function () {
-
+    $("div#errores").hide();
     // Instantiate a counter
-    clock = new FlipClock($('.clock'), 1000, {
+    clock = new FlipClock($('.clock'), 120, {
         clockFace: 'Counter',
         autoStart: true,
         countdown: true,
         stop: function () {
             alert("El tiempo se acabo");
-            window.location.replace("http://www.google.com");
+            window.location.replace("TimeOut.html");
         }
     });
 
     $("#btnContinuar").on("click", function () {
-        if (corregirTodos()) {
-            alert("muy bien");
+        if ($(this).val() == "Corregir!") {
+            if (corregirTodos()) {
+                $("#btnContinuar").val("Continuar >>");
+                $("#btnContinuar").css("background-color", "lightgreen");
+                clock.setTime(1000);
+            } else {
+                $("#btnContinuar").attr("disabled", true);
+                $("#btnContinuar").css("background-color", "lightcoral");
+                $("#btnContinuar").css("cursor", "auto");
+                $("div#errores span").text("Tenes 30 segundos para revisar lo que has hecho mal. APROVECHALOS");
+                $("div#errores").fadeIn();
+                clock.setTime(30);
+            }
         } else {
-            clock.setTime(15);
-            alert('Tienes algunos errores.\n Tenes 15 segundos para revisar lo que has hecho mal.\n\t APROVECHALOS');
+            alert("terminaste el juego");
         }
+
     });
 
 

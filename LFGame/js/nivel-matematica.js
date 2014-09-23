@@ -2,9 +2,10 @@
 
 $(document).ready(function () {
     $("div#errores").hide();
+    habilitarPaginacion(3);
     var clock;
     // Instantiate a counter
-    clock = new FlipClock($('.clock'), 1000, {
+    clock = new FlipClock($('.clock'), 180, {
         clockFace: 'Counter',
         autoStart: true,
         countdown: true,
@@ -128,19 +129,21 @@ $(document).ready(function () {
             }
             if (resultado) {
                 $("#btnContinuar").val("Continuar >>");
-                $("#btnContinuar").css("curbackground-color", "Aqua")
+                $("#btnContinuar").css("background-color", "lightgreen");
+                clock.setTime(1000);
             } else {
-                $("#btnContinuar").attr("disable", true);
+                $("#btnContinuar").attr("disabled", true);
                 $("#btnContinuar").css("background-color", "lightcoral");
                 $("#btnContinuar").css("cursor", "auto");
-                $("div#errores span").text("Tenes 30 segundos para revisar lo que has hecho mal. APROVECHALOS");
+                $("div#errores span").text("Existen algunos errores. Tenes 45 segundos para revisar lo que has hecho mal. APROVECHALOS");
                 $("div#errores").fadeIn();
-                clock.setTime(30);
+                clock.setTime(45);
             }
-        } else { 
-            alert("redireccionado al proximo nivel")
+        } else {
+            localStorage.setItem("nivelActual", "4");
+            window.location.replace("NivelEspectaculos.html");
         }
-        
+
     });
 
 

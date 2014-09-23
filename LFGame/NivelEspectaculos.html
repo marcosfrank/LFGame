@@ -17,6 +17,7 @@
     <script type="text/javascript" src="js/modernizr.js"></script>
     <script type="text/javascript" src="js/flipclock.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script src="js/nivel-general.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/nivel-espectaculos.js"></script>
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -49,14 +50,13 @@
         <div class="seven columns text-right"  id="divPaginacion">
             <nav class="pagination add-bottom" id="paginacionNiveles">
                 <span id="niveles">NIVELES</span>
-                <a href="#" class="page-numbers prev inactive">< Ant</a>
-                <a href="#" class="page-numbers">1</a>
-                <a href="#" class="page-numbers inactive">2</a>
-                <a href="#" class="page-numbers inactive">3</a>
-                <a href="#" class="page-numbers inactive">4</a>
-                <a href="#" class="page-numbers inactive">5</a>
-                <a href="#" class="page-numbers inactive">6</a>
-                <a href="#" class="page-numbers next">Sig ></a>
+                <a href="NivelMatematica.html" class="page-numbers prev">< Ant</a>
+                <a href="NivelIdiomas.html" class="page-numbers">1</a>
+                <a href="NivelGeografia.html" class="page-numbers">2</a>
+                <a href="NivelMatematica.html" class="page-numbers">3</a>
+                <a href="NivelEspectaculos.html" class="page-numbers">4</a>
+                <a href="NivelHistoria.html" class="page-numbers inactive">5</a>
+                <a href="NivelHistoria.html" class="page-numbers next inactive">Sig ></a>
             </nav>
         </div>
     </div>
@@ -66,6 +66,17 @@
     <div class="content-outer">
         <div id="page-content">
             
+            <div class="row">
+                <div class="twelve columns text-center">
+                    <p> 
+                        El objetivo de este nivel es unir las peliculas con sus respectivos directores, actor principal, 
+                        cantidad de oscars y una fotografia de la misma. Para lograrlo, arrastra los elementos hacia la
+                        columna de las pelicula correspondiente.
+                    </p>
+                </div>
+            </div>
+            <hr />
+
             <div class="row" id="peliculas">
                 <!-- Titulos de película -->
                 <div class="twelve columns">
@@ -101,9 +112,8 @@
                         </ul>
                     </div>
                 </div>  
-                <hr />
             </div>
-            
+            <br />
             <!-- Opciones para completar -->
             <!-- DIRECTORES -->
             <div class="row">
@@ -142,12 +152,22 @@
                     <ul class="opciones" id="opcionesScreenshot"></ul>
                 </div>
             </div>
-            <hr />
+            <br />
 
              <!-- ROW de boton corregir -->
             <div class="row" style="text-align:right">
                 <input id="btnContinuar" type="button" value="Corregir!" style="min-width:150px" />
             </div>
+
+            
+            <div id="errores" class="row">
+                <div class="twelve column">
+                    <hr />
+                    <span></span>
+                    <a href="NivelEspectaculos.html"><input id="volver" type="button" value="Volver a Intentarlo" style="min-width:150px" /></a>
+                </div>
+            </div>
+
         </div>
     </div>
     

@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
-   
-
+   $("div#errores").hide();
+   habilitarPaginacion(4);
 	//OBJETO EJERCICIO
 	function pelicula(nom, dir, act, src, osc ) {
 		this.nombre = nom,
@@ -105,13 +105,12 @@
 
 	// Instantiate a counter
 	var clock;
-	clock = new FlipClock($('.clock'), 1000, {
+	clock = new FlipClock($('.clock'), 120, {
 		clockFace: 'Counter',
 		autoStart: true,
 		countdown: true,
 		stop: function () {
-			alert("El tiempo se acabo");
-			window.location.replace("http://www.google.com");
+			window.location.replace("TimeOut.html");
 		}
 	});
 
@@ -121,11 +120,7 @@
 	$("span#titulo4").text(ejerciciosElegidos[3].nombre);
 	crearLIDesordenados();
 
-    $("ul.contenedor").droppable({
-        out:function(event,ui){
-            console.log("a");
-        }
-    });
+    $("ul.contenedor").droppable();
 
 	$("ul.contenedor").sortable({
 		connectWith: 'ul.contenedor',
@@ -141,14 +136,26 @@
     
 	
 	$("#btnContinuar").on("click", function () {
-		if(corregirTodos()){
-			//SI ESTAN TODOS BIEN
-			alert('TODOS bien');
-		}else{
-			clock.setTime(30);
-			alert('Tenes 30 segundos para revisar lo que has hecho mal. APROVECHALOS');
-            $("#btnContinuar").attr("disabled", "true");
-		}
+        if ($(this).val() == "Corregir!") {
+            if(corregirTodos()){
+			    //SI ESTAN TODOS BIEN
+			    $("#btnContinuar").val("Continuar >>");
+                $("#btnContinuar").css("background-color", "lightgreen");
+                clock.setTime(1000);
+		    }else{
+                $("#btnContinuar").attr("disabled", true);
+                $("#btnContinuar").css("background-color", "lightcoral");
+                $("#btnContinuar").css("cursor", "auto");
+                $("div#errores span").text("Hay algunos errores. Tenes 15 segundos para revisar lo que has hecho mal. APROVECHALOS");
+                $("div#errores").fadeIn();
+                clock.setTime(15);
+		    }
+        }else{
+            
+            localStorage.setItem("nivelActual", "5");
+            window.location.replace("NivelHistoria.html");
+        }
+		
 		
 	});
 

@@ -61,11 +61,11 @@
     <Content Include="images\LFGame\historia.jpg" />
     <Content Include="images\LFGame\historia2.jpg" />
     <Content Include="images\LFGame\historia3.jpg" />
+    <Content Include="js\nivel-general.js" />
     <Content Include="js\nivel-index.js" />
     <Content Include="js\jquery-1.11.1.min.js" />
     <Content Include="js\jquery-migrate-1.2.1.min.js" />
     <Content Include="js\jquery.imagemapster.min.js" />
-    <Content Include="Niveles.txt" />
     <Content Include="NivelHistoria.html" />
     <Content Include="css\nivel-historia.css" />
     <Content Include="css\nivel-idiomas.css" />

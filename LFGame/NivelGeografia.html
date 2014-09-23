@@ -20,6 +20,7 @@
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script src="js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
     <script src="js/jquery.imagemapster.min.js" type="text/javascript"></script>
+    <script src="js/nivel-general.js" type="text/javascript"></script>
     <script src="js/nivel-geografia.js" type="text/javascript"></script>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -52,14 +53,13 @@
         <div class="seven columns text-right"  id="divPaginacion">
             <nav class="pagination add-bottom" id="paginacionNiveles">
                 <span id="niveles">NIVELES</span>
-                <a href="#" class="page-numbers prev inactive">< Ant</a>
-                <a href="#" class="page-numbers">1</a>
-                <a href="#" class="page-numbers inactive">2</a>
-                <a href="#" class="page-numbers inactive">3</a>
-                <a href="#" class="page-numbers inactive">4</a>
-                <a href="#" class="page-numbers inactive">5</a>
-                <a href="#" class="page-numbers inactive">6</a>
-                <a href="#" class="page-numbers next">Sig ></a>
+                <a href="NivelIdiomas.html" class="page-numbers prev">< Ant</a>
+                <a href="NivelIdiomas.html" class="page-numbers">1</a>
+                <a href="NivelGeografia.html" class="page-numbers">2</a>
+                <a href="NivelMatematica.html" class="page-numbers inactive">3</a>
+                <a href="NivelEspectaculos.html" class="page-numbers inactive">4</a>
+                <a href="NivelHistoria.html" class="page-numbers inactive">5</a>
+                <a href="NivelMatematica.html" class="page-numbers next inactive">Sig ></a>
             </nav>
         </div>
     </div>
@@ -70,12 +70,12 @@
         <div id="page-content">
             <div class="row">
                 <div class="twelve columns text-center">
-                    <p> 
-                        El objetivo de este nivel es que nombres 5 (cinco) de las provincias de nuestro país con sus 
+                    <span> 
+                        El objetivo de este nivel es nombrar 5 (cinco) de las provincias de nuestro país con sus 
                         respectivas capitales. Separando geográficamente el país en las siguientes zonas:
                         Cuyo, Mesopotamia, Centro, NOA, Patagonia y Norte Central. 
-                        <h5>USA UNA PROVINCIA DE CADA REGIÓN. [PISTA:colores]</h5>
-                    </p>
+                        <h5>DEBES USAR UNA PROVINCIA DE CADA REGIÓN. [PISTA:colores]</h5>
+                    </span>
                 </div>
             </div>
             <div class="row">
@@ -85,6 +85,15 @@
             <div class="row" style="text-align:right">
                 <input id="btnContinuar" type="button" value="Corregir!" style="min-width:150px" />
             </div>
+
+            <div id="errores" class="row">
+                <div class="twelve column">
+                    <hr />
+                    <span></span>
+                    <a href="NivelGeografia.html"><input id="volver" type="button" value="Volver a Intentarlo" style="min-width:150px" /></a>
+                </div>
+            </div>
+
         </div>
     </div>
 
