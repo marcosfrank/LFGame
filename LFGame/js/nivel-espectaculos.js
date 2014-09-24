@@ -110,7 +110,7 @@
 		autoStart: true,
 		countdown: true,
 		stop: function () {
-			window.location.replace("TimeOut.html");
+			window.location.replace("TimeOut.html?NivelEspectaculos.html");
 		}
 	});
 

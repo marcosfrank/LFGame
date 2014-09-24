@@ -103,7 +103,7 @@ $(document).ready(function () {
         countdown: true,
         stop: function () {
             alert("El tiempo se acabo");
-            window.location.replace("TimeOut.html");
+            window.location.replace("TimeOut.html?NivelHistoria.html");
         }
     });
 

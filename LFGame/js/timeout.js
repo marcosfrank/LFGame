@@ -1,11 +1,12 @@
-﻿function leerGET() {
-    var cadGET = location.search.substr(1, location.search.length);
-    var arrGET = cadGET.split("&");
-    return arrGET;
-}
+﻿
+/// <reference path="jquery-1.11.1.min.js" />
+function getUrlVars() { var vars = [], hash; var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'); for(var i = 0; i < hashes.length; i++) { hash = hashes[i].split('='); vars.push(hash[0]); vars[hash[0]] = hash[1]; } return vars; }
+
 
 $(document).ready(function () {
-    var variables = leerGET();
-    
-    $("span.timeout").after("<a href='" +variables[0] +".html'>"+variables[1]+"</a>")
+    var valoresGet = getUrlVars();
+    habilitarPaginacion(1);
+    $("#volverAlNivel").on("click", function () {
+        window.location.replace(valoresGet[0]);
+    });
 });
