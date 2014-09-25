@@ -6,6 +6,9 @@ function getUrlVars() { var vars = [], hash; var hashes = window.location.href.s
 $(document).ready(function () {
     var valoresGet = getUrlVars();
     habilitarPaginacion(1);
+    var as = $("#paginacionNiveles").find("a");
+    $(as).first().addClass("inactive");
+    $(as).last().addClass("inactive");
     $("#volverAlNivel").on("click", function () {
         window.location.replace(valoresGet[0]);
     });
