@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="css/default.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
+    <link href="css/media-queries.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/juegofinalizado.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/doubletaptogo.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <script src="js/juegofinalizado.js" type="text/javascript"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>¡---GANASTE---!</title>
+</head>
+<body>
+    <!-- Titulo de Pagina  -->
+    <div id="page-title">
+        <div class="row">
+            <div class="ten columns centered text-center">
+                <h1><span>¡--</span>LF Game<span>--!</span></h1>
+                <p>
+                    Este juego pondrá en evaluación tu nivel de distintas materias que estas cursando en la escuela.
+                    El objetivo del mismo es sencillo:
+                    Sobrepasar cada uno de los niveles que se plantean para luego poder acceder a un gran secreto lugar escondido.
+                    <span>Descubreló!</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="row">
+        
+        <!-- Niveles -->
+        <div class="twelve columns text-right"  >
+            <nav class="pagination add-bottom" id="paginacionNiveles">
+                <span id="niveles">NIVELES</span>
+                <a href="NivelHistoria.html" class="page-numbers prev">< Ant</a>
+                <a href="NivelIdiomas.html" class="page-numbers">1</a>
+                <a href="NivelGeografia.html" class="page-numbers">2</a>
+                <a href="NivelMatematica.html" class="page-numbers">3</a>
+                <a href="NivelEspectaculos.html" class="page-numbers">4</a>
+                <a href="NivelHistoria.html" class="page-numbers">5</a>
+                <a href="#" class="page-numbers next inactive">Sig ></a>
+            </nav>
+        </div>
+    </div>
+
+    
+    <!-- Contenido Del NIVEL  -->
+    <div class="content-outer">
+        <div id="page-content">
+            
+            <!-- ACA VA EL CODIGO DEL NIVEL -->
+
+            <div class="row" style="text-align:right">
+                <div class="twelve columns text-center centered">
+                     <span>
+                         <span class="resaltar">LO HAS HECHO.</span> A base de esfuerzo y trabajo has logrado tu objetivo
+                         y eso nos pone muy orgulloso de vos. Ahora te preguntarás cual es el premio. Ese <span class="resaltar">SECRETO</span> premio.
+                         Obviamente no vamos a ponertela muy fácil, así que van un par de instrucciones.
+                         Localiza la carpeta que se encuentra en el escritorio que se llama APP y trata de abrirla.
+                      </span>
+                      <br />
+                            <input type="button" class="entre" value="Ya entre!" onclick="alert('Comienza a Utilizar el Premio entonces!!')"/>
+                            <input type="button" class="noencuentro" value="No encuentro"  id="primero" onclick="mostrarDiv(1,this)" />
+                      <hr />
+                </div>
+                <div class="ten column text-center centered" id="contenedorInstrucciones">
+                    <div class="instruccion">
+                         ¿Cómo? ¿No está? Entonces hemos olvidado de agregartela. Vas a tener que hacerlo por tus propios medios.
+                         Dirigete a mi equipo. Una vez ahi, entra al disco en el que esta el sistema operativo. 
+                         <br />
+                         <span class="pista">[Pista: Casa empieza con la letra correspondiente]</span>
+                         <br />
+                            <input type="button" class="entre" value="Ya entre!"  onclick="mostrarDiv(2,this)" />
+                            <input type="button" class="noencuentro" value="No encuentro"/>
+                            <hr />
+                      </div>
+                      <div class="instruccion">
+                         Ahora anda a "LFGamePremio". Estas muy cerca de lograrlo. Muy Bien. ¿Te acordas como se dice carpeta en inglés? Bueno haz doble click en dicha carpeta. 
+                         <br />
+                         <span class="pista">[Pista: Busca en Google]</span>
+                         <br />
+                            <input type="button" class="entre" value="Ya entre!" onclick="mostrarDiv(3,this)"/>
+                            <input type="button" class="noencuentro" value="No encuentro"/>
+                            <hr />
+                      </div>
+                      
+                      <div class="instruccion">
+                         Perfecto. Ahora entra en la carpeta cuyo nombre es la capital de Italia y luego a la que tiene de nombre un país que,
+                         podemos decir, se encuentra dentro de esa ciudad. 
+                         <br />
+                         <span class="pista">[Pista: Preguntale a alguien que haya estado en Italia]</span>
+                         <br />
+                            <input type="button" class="entre" value="Ya entre!" onclick="mostrarDiv(4,this)"/>
+                            <input type="button" class="noencuentro" value="No encuentro"/>
+                         <hr />
+                      </div>
+                      <div class="instruccion">
+                         Lo estas haciendo de maravilla. Veo muchos números, pero la carpeta correspondiente es aquella que tiene al MCM de 5,7 y 13. 
+                         <br />
+                         <span class="pista">[Pista: Alguna maestra que conozcas puede ayudarte]</span>
+                         <br />
+                            <input type="button" class="entre" value="Ya entre!" onclick="mostrarDiv(5,this)"/>
+                            <input type="button" class="noencuentro" value="No encuentro"/>
+                            <hr />
+                      </div>
+                      <div class="instruccion">
+                         Pero que increible que sos. Sigamos por la cantidad de oscars que ganaron las películas mas premiadas 
+                         
+                         <br />
+                         <span class="pista">[Pista: Titanic, Ben Hur y El Señor de los Anillos III fueron las únicas que lo lograron]</span>
+                         <br />
+                            <input type="button" class="entre" value="Ya entre!" onclick="mostrarDiv(6,this)"/>
+                            <input type="button" class="noencuentro" value="No encuentro"/>
+                            <hr />
+                      </div>
+                      <div class="instruccion">
+                         ¡WOOOW! ya casi estamos. Veamos los años de las carpetas. Bueno tenemos que entrar al año en que se firmo la independencia Argentina.
+                         <br />
+                         <span class="pista">[Pista: Sucedio en Tucumán]</span>
+                         <br />
+                            <input type="button" class="entre" value="Ya entre!" onclick="mostrarDiv(7,this)"/>
+                            <input type="button" class="noencuentro" value="No encuentro"/>
+                            <hr />
+                      </div>
+                      <div class="instruccion">
+                         Excelente. Te Felicito. Has llegado a la famosa carpeta App. Seleccionala y copiala. Luego la pegas en el escritorio. 
+                         
+                         <br />
+                            <input type="button" class="entre" value="Ya la Copie!" onclick="mostrarDiv(8,this)"/>
+                            <input type="button" class="noencuentro" value="No pude Copiarla"/>
+                            <hr />
+                      </div>
+                      <div class="instruccion">
+                         ¿Estás seguro que App esta en el escritorio? Magnífico, ahora borra la carpeta que esta en C:\LFGamePremio
+                         <br />
+                            <input type="button" class="entre" value="Borrada :)!" onclick="mostrarDiv(9,this)"/>
+                            <input type="button" class="noencuentro" value="No pude :("/>
+                            <hr />
+                      </div>
+                       <div class="instruccion">
+                          Bien ahora nos resta que le cambies el nombre a "Juegos" ¿Queeeeeeeee? Si si a "Juegos".
+                          Entra y emepeza a disfrutar tu premio. ATENCION: Hay algunos juegos que tienen instrucciones. Leerlas antes de comenzar a jugar.
+                         <br />
+                            <input type="button" class="entre" value="A JUGAR!" onclick="alert('Comienza a Jugar!!')"/>
+                            <hr />
+                      </div>
+                </div>
+                      
+                        
+                    
+                
+               <div class="four columns">
+                    <div class="tapador" style="width:50px; height:20px"></div>
+                    <div class="tapador" style="width:80px; height:20px"></div>
+                    <div class="tapador" style="width:20px; height:20px"></div>
+                </div>
+            </div>
+
+            <div class="row" style="text-align:right">
+                <input id="btnContinuar" type="button" value="Corregir!" style="min-width:150px" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Primer cambio de color (Gris Claro) -->
+    <section id="tweets">
+        <div class="row">
+            <div class="seven columns">
+                <p>
+                    El misterioso final, hará que LF Game sea imposible de abandonar. Continúa esta historia hasta finalizar
+                    todos los niveles.
+                    Solo así podrás lograr el acceso a un secreto lugar. ¿Qué hay en dicho lugar? Es el enigma descubrir. Te
+                    aseguro que te va a gustar y mucho.
+                    ¡Mucha Suerte!
+                </p>
+            </div>
+            <div class="five columns">
+                <aside class="pull-quote">
+                    <blockquote>
+                        <p>
+                            Los grandes logros no se obtienen de la noche a la mañana, son el resultado del trabajo y la dedicación
+                        </p>
+                    </blockquote>
+                </aside>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve columns centered text-center">
+                <hr />
+                <h5>RESOLVER DE MANERA INDIVIDUAL</h5>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

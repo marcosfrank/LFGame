@@ -58,6 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="aaPlantilla.html" />
+    <Content Include="css\juegofinalizado.css" />
+    <Content Include="js\juegofinalizado.js" />
+    <Content Include="JuegoTerminado.html" />
     <Content Include="images\LFGame\historia.jpg" />
     <Content Include="images\LFGame\historia2.jpg" />
     <Content Include="images\LFGame\historia3.jpg" />

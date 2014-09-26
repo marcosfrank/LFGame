@@ -71,7 +71,7 @@ $(document).ready(function () {
     }
 
 
-    $("#contenidoNivel").load("../templates/geografia1.htm");
+    //$("#contenidoNivel").load("../templates/geografia1.htm");
     $("#btnContinuar").on("click", function () {
         if ($(this).val() == "Corregir!") {
             if (validarCantidadProvincias()) {

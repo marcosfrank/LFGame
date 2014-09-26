@@ -1,0 +1,28 @@
+﻿div.instruccion{
+    font-family: raleway-bold, sans-serif;
+}
+
+span.resaltar{
+    font-family: raleway-bold, sans-serif;
+    color: #313131;
+    font-size:18px;
+}
+
+span.pista{
+    color: #313131;
+    font-size:18px;
+}
+
+input[type="button"]{
+    padding: 2px 10px 2px 10px;
+    border-radius: 2px;
+    font-size: 15px;
+}
+
+input.entre{
+    background-color:Green;
+}
+
+input.noencuentro{
+    background-color:Red;
+}
