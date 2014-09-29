@@ -10,7 +10,7 @@ $(document).ready(function () {
     $("#btnVolverNivel").on("click", function () {
         switch (parseInt(nivel)) {
             case 1:
-                window.location.replace("NivelIdioma.html");
+                window.location.replace("NivelIdiomas.html");
                 break;
             case 2:
                 window.location.replace("NivelGeografia.html");
@@ -25,7 +25,7 @@ $(document).ready(function () {
                 window.location.replace("NivelHistoria.html");
                 break;
             default:
-                window.location.replace("NivelIdioma.html");
+                window.location.replace("NivelIdiomas.html");
                 break;
         }
     });
