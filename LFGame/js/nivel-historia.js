@@ -102,7 +102,6 @@ $(document).ready(function () {
         autoStart: true,
         countdown: true,
         stop: function () {
-            alert("El tiempo se acabo");
             window.location.replace("TimeOut.html?NivelHistoria.html");
         }
     });
@@ -122,7 +121,7 @@ $(document).ready(function () {
                 clock.setTime(30);
             }
         } else {
-            alert("terminaste el juego");
+            window.location.replace("JuegoTerminado.html");
         }
 
     });

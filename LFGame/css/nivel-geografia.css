@@ -71,4 +71,5 @@ ul.patagonia li input{
 
 ul li input.error{
     background-color:rgba(240,77,85,0.4);
+	color:#838C95;
 }
